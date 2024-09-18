@@ -103,7 +103,7 @@ end function
 private function utf_8_funloc_3 cdecl (fid as integer const ptr) as format_verifier_meth
 	dim f as format_verifier_meth
 	if fid = @feed_char then f.feed_char = procptr(utf_8_feed_char_3) 
-	if fid = @check_end then f.check_end = procptr(utf_8_end_ok) 
+	if fid = @check_end then f.check_end = procptr(utf_8_end_bad) 
 	if fid = @get_desc then f.get_desc = procptr(utf_8_desc) 
 	if fid = @destroy then f.destroy = procptr(utf_8_destroy) 
 	return f
@@ -112,7 +112,7 @@ end function
 private function utf_8_funloc_2 cdecl (fid as integer const ptr) as format_verifier_meth
 	dim f as format_verifier_meth
 	if fid = @feed_char then f.feed_char = procptr(utf_8_feed_char_2) 
-	if fid = @check_end then f.check_end = procptr(utf_8_end_ok) 
+	if fid = @check_end then f.check_end = procptr(utf_8_end_bad) 
 	if fid = @get_desc then f.get_desc = procptr(utf_8_desc) 
 	if fid = @destroy then f.destroy = procptr(utf_8_destroy) 
 	return f
@@ -121,7 +121,7 @@ end function
 private function utf_8_funloc_1 cdecl (fid as integer const ptr) as format_verifier_meth
 	dim f as format_verifier_meth
 	if fid = @feed_char then f.feed_char = procptr(utf_8_feed_char_1) 
-	if fid = @check_end then f.check_end = procptr(utf_8_end_ok) 
+	if fid = @check_end then f.check_end = procptr(utf_8_end_bad) 
 	if fid = @get_desc then f.get_desc = procptr(utf_8_desc) 
 	if fid = @destroy then f.destroy = procptr(utf_8_destroy) 
 	return f
